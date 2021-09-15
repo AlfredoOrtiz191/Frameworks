@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitivas JAVASCRIPT</title>
+    <link rel="stylesheet" href="css/ejs3.css" type="text/css"/>
+    <!--Links de bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+    <header>
+        <h1><a href="#">¡Javascript!</a></h1>
+    </header>
+    <section class="row container-fluid" id="todo">
+        <section id="Primero" class="container">
+            <select id="temas">
+                <option value="0">Seleccione...</option>
+                <option value="Cuadro">Cuadritos</option>
+                <option value="Asks">Formulario</option>
+            </select>
+        </section>  
+        <section id="principal" class="container">
+            <article id="Cuadro" class="contenedor">
+                <h3>Numero de cuadritos</h3>
+                <input type="number" class="p-2 mt-5" id="n1" placeholder="¿Cuantos cuadritos desea colocar?"/> <br>
+                Color relleno:<input class="p-2 m-3" type="text" id="color" placeholder="Ex. #ffffff o color en ingles"/>
+                Color de borde:<input class="p-2 m-3" type="text" id="color2" placeholder="Ex. #ffffff o color en ingles"/> <br>
+                <input type="button" value="¡CREAR!" onclick="Cuadros()"/>
+            </article>
+            
+            
+            
+
+            <article id="Asks" class="contenedor">
+                <h3>Preguntas RANDOM</h3>
+
+                
+                    <fieldset >
+                        <label class="pt-5" id="p1">¿Quien es el creador de facebook?</label>
+                      
+                            <input type="radio" name="n1" value="Mark Zuckerberg"> Mark Zuckerberg
+                            <input type="radio" name="n1" value="Steve jobs"> Steve jobs                       
+                            <input type="radio" name="n1" value="Jeff Bezos"> Jeff Bezos
+                        
+                    </fieldset>
+                    <fieldset>
+                        <label class="pt-5" id="p2">¿Actual presidente de Mexico?</label>
+                        
+                            <input type="radio" name="n2" value="Juancho Bananas"> Juancho Bananas                        
+                            <input type="radio" name="n2" value="Andres Manuel Lopez Obrador"> Andres Manuel Lopez Obrador                    
+                            <input type="radio" name="n2" value="Luis Alfredo Feliciano Ortiz"> Luis Alfredo Feliciano Ortiz
+                        
+                    </fieldset>
+                    <fieldset>
+                        <label class="pt-5" id="p3">¿Cuantos años tiene la maestra Anahi?</label>
+                       
+                            <input type="radio" name="n3" value="38"> 38                       
+                            <input type="radio" name="n3" value="39"> 39                       
+                            <input type="radio" name="n3" value="40"> 40
+                       
+                    </fieldset>
+                    <fieldset>
+                        <label class="pt-5" id="p4">¿Que dia del año se considera el dia del programador?</label>
+                        
+                            <input type="radio" name="n4" value="256"> 256                        
+                            <input type="radio" name="n4" value="145"> 145                        
+                            <input type="radio" name="n4" value="389"> 389
+                        
+                    </fieldset>
+                    <fieldset>
+                        <label class="pt-5" id="p5">¿En que pais vives?</label>
+                        
+                            <input type="radio" name="n5" value="EstadosUnidos"> EstadosUnidos                        
+                            <input type="radio" name="n5" value="Mexico"> Mexico                       
+                            <input type="radio" name="n5" value="Canada"> Canada
+                        
+                    </fieldset>
+                
+
+                    <input class="mt-5" type="button" value="imprimir" onclick="Formulario()"/>
+
+                
+            </article>
+            <p id="resultado" Class="res">
+
+            </p> 
+        </section>
+        
+    </section>
+     <script src="js/funcionalidad.js">
+
+     </script>
+<footer>
+   <h6>Tarea</h6>  
+   
+   <h6>Realizado Por: Feliciano Ortiz Luis ALfredo</h6> 
+</footer>
+</body>
+</html>
+

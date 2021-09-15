@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+#todo{
+    height: auto;
+}
+header{
+    background-color: #4A403A;
+    text-align: center;
+}
+header a{
+    text-decoration: none;
+    color: #EFEFEF;
+    display: block;
+    font-size: 2.5rem;
+}
+header a:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5)
+}
+section{
+    background-color: #FFC069;
+    font-size: 1.5rem;
+}
+#Primero{
+    
+    text-align: center;
+    padding: 50px;
+}
+footer{
+    background-color: #A45D5D;
+    color:#FFC069;
+    text-align: center;
+    padding: 20px 0px;
+}
+.contenedor{
+    width: 99%;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    border: solid 1px #4A403A;
+    display: none;
+}
+#resultado{
+    transition: all .4s ease-in-out;
+    display: block;
+}
+.cuadrito{
+    width: 100px;
+    height: 100px;
+    line-height: 25px;
+    border:double 5px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    
+}
+fieldset{
+    margin-top: 30px;
+    height: 150px;
+    background-color:#a95f5f66;
+}
+legend{
+    padding-top: 30px;
+}
