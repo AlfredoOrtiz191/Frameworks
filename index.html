@@ -26,6 +26,8 @@
                 <option value="0">Seleccione...</option>
                 <option value="Cuadro">Cuadritos</option>
                 <option value="Asks">Formulario</option>
+                <option value = "nodos">Reservaciones</option>
+                
             </select>
         </section>  
         <section id="principal" class="container">
@@ -90,6 +92,23 @@
 
                 
             </article>
+            <article id="nodos" class="contenedor">
+                <h3>Reservaciones</h3>
+                
+
+                <select id="reservacion">
+                    <option value="0">Seleccione una opcion</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <p id="mesas"></p>
+                <a id="mostrar">Mostar</a><br>
+                <input type="button" value="¡CREAR TEMATICA RESTAURANTE!" onclick="newtema()"/>
+            </article>
+            
+            
             <p id="resultado" Class="res">
 
             </p> 
@@ -99,7 +118,7 @@
      <script src="js/funcionalidad.js">
 
      </script>
-<footer>
+<footer id="pie">
    <h6>Tarea</h6>  
    
    <h6>Realizado Por: Feliciano Ortiz Luis ALfredo</h6> 
