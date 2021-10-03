@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestra de Primitivas+DOM</title>
+    <link rel="stylesheet" href="css/cssT.css" type="text/css"/>
+    <!--Links de bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="#"><i class="material-icons">&#xe8f6;</i>  ¡ CREA TU PROPIA TARJETA !  <i class="material-icons">&#xe8f6;</i></a></h1>
+    </header>
+    <section class="row container-fluid" id="todo">
+        <section id="principal" class="d-flex justify-content-center col-sm-5">
+
+            <div id="resultado" Class="res"> 
+               <p id="t1_1" class="d-flex justify-content-center">Titulo</p><br>
+               <p id="s1_1" class="d-flex justify-content-center">Subtitulo</p><br>
+               <div class="d-flex justify-content-center">
+               <img src="img/uno.jpg" id="foto"/>
+            </div><br>
+            
+               <textarea static rows="6" cols="35" id="n1_1" placeholder="Mensaje"></textarea>
+            
+               <p class="d-flex justify-content-end mr-5" id="d1_1">Destinatario</p>
+            </div><br>
+            
+            
+        </section>
+        <aside id="lateral" class="col-sm-7">
+            <button class="mr-5" onclick="location.href='../index.html'">Regresar</button>
+            <select id="temas">
+               <option value="0">Tarjeta</option>
+                <option value="1">Dia de la independencia</option>
+                <option value="2">Dia del programador</option>
+                <option value="3">Navideña</option>
+            </select>
+            <button style='font-size:12px' onclick="location.reload()">Elegir otro tipo de tarjeta</button><br>
+
+            <article id="1" class="contenedor">
+                <h3>Dia de la independencia</h3>
+
+                <input type="text" maxlength="15"  id="t1" class="m-2" placeholder="Titulo de la tarjeta"/>
+                <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_t1">
+                <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="17" max="40" id="nf_t1">
+                <input type="text" maxlength="40" id="s1" class="m-2" placeholder="Subtitulo de la tarjeta"/>
+                <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_s1">
+                <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="10" max="30" id="nf_s1">
+                <textarea id="n1" maxlength="180" class="m-2 mb-3" placeholder="Mensaje de la tarjeta"></textarea>
+                <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_n1">
+                <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="10" max="25" id="nf_n1"><br><hr>
+                
+                <p class="d-flex justify-content-start"><i class="material-icons">&#xe3b0;</i>Escoje una imagen:</p>
+                <input type="radio" name="opcion" class="m-2" value="a" checked><img src="img/I1.jpeg" class="galeria" onclick="tarjeta1('I1')"/>
+                <input type="radio" name="opcion" class="m-2" value="b"><img src="img/I2.jpeg" class="galeria" onclick="tarjeta1('I2')"/>
+                <input type="radio" name="opcion" class="m-2" value="c"><img src="img/I3.jpeg" class="galeria" onclick="tarjeta1('I3')"/> <br><hr>
+                <input type="text" id="d1" class="m-2 mt-3" placeholder="Destinatario"/><br>
+                <p>Color margen: <input type="color" id="m1" ></p>
+                <input type="button" class="m-2" value="Crear Tarjeta" onclick="tarjeta1()" />
+                
+                
+            </article>
+            <article id="2" class="contenedor">
+                <h3>Dia del programador</h3>
+
+                    <input type="text" maxlength="15"  id="t2" class="m-2" placeholder="Titulo de la tarjeta"/>
+                    <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_t2">
+                    <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="17" max="40" id="nf_t2">
+                    <input type="text" maxlength="40" id="s2" class="m-2" placeholder="Subtitulo de la tarjeta"/>
+                    <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_s2">
+                    <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="10" max="30" id="nf_s2">
+                    <textarea id="n2" maxlength="180" class="m-2 mb-3" placeholder="Mensaje de la tarjeta"></textarea>
+                    <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_n2">
+                    <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="10" max="25" id="nf_n2"><br><hr>
+
+                    <p class="d-flex justify-content-start"><i class="material-icons">&#xe3b0;</i>Escoje una imagen:</p>
+                    <input type="radio" name="opcion" class="m-2" value="a" checked><img src="img/I2_1.jpeg" class="galeria" onclick="tarjeta2('I2_1')"/>
+                    <input type="radio" name="opcion" class="m-2" value="b"><img src="img/I2_2.jpeg" class="galeria" onclick="tarjeta2('I2_2')"/>
+                    <input type="radio" name="opcion" class="m-2" value="c"><img src="img/I2_3.jpeg" class="galeria" onclick="tarjeta2('I2_3')"/> <br><hr>
+                    <input type="text" id="d2" class="m-2 mt-3" placeholder="Destinatario"/><br>
+                    <p>Color margen: <input type="color" id="m2" ></p>
+                    <input type="button" class="m-2" value="Crear Tarjeta" onclick="tarjeta2()"/>
+
+            </article>
+            <article id="3" class="contenedor">
+                <h3>Dia de navidad</h3>
+                
+                    <input type="text" maxlength="15"  id="t3" class="m-2" placeholder="Titulo de la tarjeta"/>
+                    <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_t3">
+                    <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="12" max="40" id="nf_t3">
+                    <input type="text" maxlength="40" id="s3" class="m-2" placeholder="Subtitulo de la tarjeta"/>
+                    <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_s3">
+                    <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="10" max="30" id="nf_s3">
+                    <textarea id="n3" maxlength="180" class="m-2 mb-3" placeholder="Mensaje de la tarjeta"></textarea>
+                    <i class="material-icons">&#xe23a;</i> Color: <input type="color" id="c_n3">
+                    <i class="material-icons">&#xe245;</i> Tamaño: <input type="number" min="10" max="25" id="nf_n3"><br><hr>
+
+                    <p class="d-flex justify-content-start"><i class="material-icons">&#xe3b0;</i>Escoje una imagen:</p>
+                    <input type="radio" name="opcion" class="m-2" value="a" checked><img src="img/I3_1.jpeg" class="galeria" onclick="tarjeta3('I3_1')"/>
+                    <input type="radio" name="opcion" class="m-2" value="b"><img src="img/I3_2.jpeg" class="galeria" onclick="tarjeta3('I3_2')"/>
+                    <input type="radio" name="opcion" class="m-2" value="c"><img src="img/I3_3.jpeg" class="galeria" onclick="tarjeta3('I3_3')"/> <br><hr>
+                    <input type="text" id="d3" class="m-2" placeholder="Destinatario"/><br>
+                    <p>Color margen: <input type="color" id="m3" ></p>
+                    <input type="button" class="m-2" value="Crear Tarjeta" onclick="tarjeta3()"/>
+
+            </article>
+
+            <button class="mt-3" id="mostrar">Imprimir</button>
+            
+        </aside> 
+    </section>
+     <script src="js/funcionalidad.js"></script>
+
+<footer>
+
+   <h6>Realizado Por: Luis Alfredo Felciano Ortiz</h6> 
+</footer>
+</body>
+</html>
+

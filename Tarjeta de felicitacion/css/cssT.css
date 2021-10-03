@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 11px;
+    
+}
+#todo{
+    height: 630px;
+    font-family:cursive;
+}
+header{
+    background-color: #018383;
+    text-align: center;
+}
+header a{
+    text-decoration: none;
+    color: #EFEFEF;
+    display: block;
+    font-size: 2.5rem;
+    font-family:cursive;
+}
+
+h3{
+    text-decoration: none;
+    color: #EFEFEF;
+    display: block;
+    font-size: 2.5rem;
+}
+header a:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5)
+}
+section{
+    background-color: #F5DEA3;
+    font-size: 1.5rem;
+}
+#lateral{
+    background-color: #02A8A8;
+    text-align: center;
+    padding: 20px 100px;
+}
+footer{
+    background-color: #018383;
+    color:#F5DEA3;
+    text-align: center;
+    padding: 20px 0px;
+}
+.contenedor{
+    width: fit-content;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    border: solid 1px #4A403A;
+    display: none;
+}
+#resultado{
+    transition: all .4s ease-in-out;
+    background-image: url(../img/f0.jpg);    
+    border: double 15px;
+    border-radius: 50px 0px;
+    width: 424px;
+}
+
+.res{
+    width: 424px;
+    height: 550px;
+    line-height: 25px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 5%; 
+}
+.galeria{
+    display: inline-block;
+    width: 16%;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 9px;
+}
+#n1{
+    width: 40%;
+    height: 20%;
+    resize: none;
+}
+#n1_1{
+    margin-left: 8%;
+    resize: none;
+    text-align: center;
+    width: 320px;
+    height: 160px;
+    background-color: transparent;
+    border-radius: 30px;
+}
+
+
+#nf_t1{
+    width: 50px;
+}
+#nf_s1{
+    width: 50px;
+}
+#nf_n1{
+    width: 50px;
+}
+
+
+#n2{
+    width: 40%;
+    height: 20%;
+    resize: none;
+}
+#mensaje1{
+    background-color: #4A403A;
+    /*border: 1px solid #ff0000;*/
+    width: 380px;
+    height: 100px;
+    
+    text-align: center;
+}
+#nf_t2{
+    width: 50px;
+}
+#nf_s2{
+    width: 50px;
+}
+#nf_n2{
+    width: 50px;
+}
+
+#n3{
+    width: 40%;
+    height: 20%;
+    resize: none;
+}
+
+#nf_t3{
+    width: 50px;
+}
+#nf_s3{
+    width: 50px;
+}
+#nf_n3{
+    width: 50px;
+}
+#foto{
+    height: 150px;
+    width: auto;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+#botonT{
+   margin-left: 90%;
+   text-decoration: none;
+   margin-bottom: 2%;
+}
