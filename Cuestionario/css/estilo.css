@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+html{
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#todo{
+    height: 586px;
+   background-image: url(https://fondosmil.com/fondo/52714.jpg);
+}
+header{
+    background-color: #464660;
+    text-align: center;
+    height: 50px;
+}
+header a{
+    text-decoration: none;
+    color: #EFEFEF;
+    display: block;
+    font-size: 2.5rem;
+}
+header a:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2.7rem;
+}
+#seccion{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    padding: 2% 4%;
+}
+footer{
+    background-color: #6D8299;
+    color: #ffffff;
+    text-align: center;
+    padding: 1% 0%;
+}
+h4{
+    font-weight: bold;
+}
+button{
+    transition: background-color .5s;
+  }
+  
+button:hover {
+    background-color: rgba(235, 29, 29, 0.483);
+  }

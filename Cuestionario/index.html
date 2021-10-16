@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="img/icono.png">
+    
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Encuesta</title>
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="img/icono.png" alt="">¡ENCUESTA FRAMEWORKS!<img src="img/icono.png" alt=""></a></h1>
+    </header>
+
+    <section class="row conteiner" id="todo">
+        
+        <section class="col-sm-8" id="seccion">
+        <h4>¿Te gusta programar?</h4>
+        SI<input type="radio" v-model="sig" class="m-2" value="SI" @click="continuarsi()" id="l">
+        NO<input type="radio" v-model="sig" class="m-2" value="NO" @click="continuarno()">
+        <marquee behavior="scroll" direction="right" scrollamount="20"><h2 v-if="m">{{mensaje}}</h2></marquee>
+
+        <h4 v-show="m1">¿Cuántos años llevas programando?</h4>
+        <input type="number" v-show="m1" v-model='time' @click="timework" id="a">
+
+        <h4 v-show="m2">¿Qué te motiva a programar?</h4>
+        <input type="text" v-show="m2" v-model='motiva' id="m">
+        
+        <h4 v-show="m3">¡Cuentanos tu experiencia!</h4>
+        <input type="text" v-show="m3" v-model='expe' id="e">
+
+        <h4 v-show="m4">¿Qué lenguajes de programacion conoces? Agrega uno por uno</h4>
+        <input type="text" v-show="m4" v-model="lenguaje" @keyup.enter="agregar()">  
+        <button @click="agregar()" v-show="m4" >Agregar Lenguaje</button>
+        <hr>
+        <p id="resultado" v-show="u">
+            
+                <li v-for="(leng,index) in lenguajes" :key="index" v-show="u">
+                    Lenguaje que conozco es:
+                    {{leng}}
+                </li> 
+    </p>
+
+        <hr>
+        <button onclick="AgregarD()" v-if="boton">Imprimir </button>
+       
+        </section>
+    </section>
+
+
+    <footer>
+        <h6>Ideas Creativas -@alfredo_ortiz129</h6> 
+        <h6>Derechos Reservados</h6>  
+        <h6>Realizado Por: Luis Alfredo Feliciano Ortiz</h6> 
+     </footer>
+    <script src="js/evj3.js"></script>
+</body>
+</html>
