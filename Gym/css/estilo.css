@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 16px;
+
+}
+#todo{
+    height: 580px;
+   background: src('img/fondo.jpg');
+}
+
+header{
+    background-color: rgba(68, 165, 126, 0.5);
+    text-align: center;
+    height: 3%;
+}
+#seccion1{
+    background-color: rgba(111, 145, 104, 0.374);
+    border: 2px #000 solid;
+}
+#seccion2{
+    background-color: rgba(52, 59, 50, 0.374);
+}
+footer{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    text-align: center;
+    padding: 1% 0%;
+}
+.table{
+    background-color: rgba(255, 255, 255, 0.51);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+img{
+    border-radius: 25px;
+}
+button{
+    transition: background-color .5s;
+  }
+  
+button:hover {
+    background-color: rgba(127, 133, 125, 0.544)
+  }
