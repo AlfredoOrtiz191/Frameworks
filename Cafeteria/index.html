@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+
+
+</head>
+<body class="img-responsive">
+    <header>
+        <marquee behavior="scroll" direction="up" scrollamount="5"><h1 class="text-white text-center" id="t">¡CAFETERIA LOLIS!</h1></marquee>
+    </header>
+
+    <section class="row conteiner-fluid" id="todo">
+        
+            <div class="col-sm-6 text-center" id="seccion2">
+                <h1 class="mt-5">BEBIDAS</h1>
+                <bebidas :bebidas="bebidasLolita"></bebidas>
+                <img id="imge" class="m-3" src="img/taza.gif" width="120" height="130" alt=""> <img id="imge" class="m-3" src="img/taza.gif" width="120" height="130" alt=""> <img id="imge" class="m-3" src="img/taza.gif" width="120" height="130" alt=""> 
+            </div>
+            <div class="col-sm-6 text-center" id="seccion1">
+                <h1 class="mt-5 mb-2">BUSCAR PRODUCTOS</h1>
+                <div class="m-5">
+                <h4>¿Como quieres buscar tu bebida?</h4>
+                Por Nombre<input type="radio" class="m-2" value="n" @click="BuscarN()">
+                Por Precio<input type="radio" class="m-2" value="p" @click="BuscarP()">
+            </div>
+                <div class="row" >
+                    <div class="col-sm-10 offset-1 mt-5 text-center" v-show="relax" >
+                    <img id="t1" src="img/Cafeteria.gif" width="580" height="360" alt=""> 
+                </div>
+                    <div v-show="nombre" class="col-sm-6 offset-3 text-center">
+                        <input type="search" v-model="toSearch" placeholder="Buscar por nombre...">
+                        <table class="table table-hover table-bordered ">
+                            <tr class="table-warning">
+                                <th>NOMBRE</th>
+                                <th>PRECIO</th>
+                            </tr> <tr v-for="bebida in buscarBebida">
+                                <td>{{bebida.nombre}}</td>
+                                <td>{{bebida.precio}}</td>
+                            </tr>
+                        </table>
+                        <h4>Coincidencias: {{bebidaEncontrada}}</h4>
+                    </div>
+                    <div v-show="precio" class="col-sm-10 offset-1 text-center">
+                        <input type="number" v-model="cost" min="0" max="100" placeholder="Buscar por precio...">
+                        <table class="table table-hover table-bordered">
+                            <tr class="table-warning">
+                                <th>NOMBRE</th>
+                                <th>INGREDIENTES</th>
+                                <th>TAMAÑO</th>
+                                <th>PRECIO</th>
+                                <th>¿VIGENTE?</th>
+                            </tr> 
+                            <tr :class="{'table-secondary':bebida.vigente==0}"
+                            v-for="bebida in costoBebida">
+                                <td>{{bebida.nombre}}</td>
+                                <td>{{bebida.ingredientes}}</td>
+                                <td>{{bebida.tamano}}</td>
+                                <td>{{bebida.precio}}</td>
+                                    <td v-if="bebida.vigente">Si</td>
+                                    <td v-if="!bebida.vigente">No</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <footer>
+        <h5>Ideas Creativas -@alfredo_ortiz129</h5> 
+        <h5>Derechos Reservados</h5>  
+        <h5>Realizado Por: Luis Alfredo Feliciano Ortiz</h5> 
+     </footer>
+    <script src="js/evj3.js"></script>
+</body>
+</html>
+
+
+
