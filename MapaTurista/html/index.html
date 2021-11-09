@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Turistiando_Guanajuato</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <!--Links para bootsrap-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+        <link rel="stylesheet" href="../css/estilos.css" />
+   </head>
+     
+
+    
+    <body background="../imagenes/plano.jpg">
+        <header class="container-fluid text-center">
+            <span>Mapa Turistico de "LA CIUDAD DE GUANAJUATO"</span>
+        </header>
+        <section class="container-fluid full-height" id="cont">
+            <div class="row">
+           <div class="col-sm-9">
+               <div>
+                    <button class="btn btn-warning" @click="MinaV = true" id="A">1</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning" @click="MuseoI = true" id="B">2</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning"@click="MuseoM = true" id="C">3</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning" @click="AG = true" id="D">4</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning mr-3" @click="CasaR = true" id="E">5</button>
+                    <button class="btn btn-warning" @click="MercadoH = true" id="F">6</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning" @click="PlazaP = true" id="G">7</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning" @click="TeatroJ = true" id="H">8</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning" @click="Pipila = true" id="I">9</button>
+                </div>
+                <div class="text-center">
+                    <alerta @ocultar="MinaV = false" v-show="MinaV" tipo="alerta1" posicion="alerta1_1">
+                        <template slot="header">
+                            Mina de la Valenciana
+                        </template>
+                        <template>
+                            Comenzó a explotarse en el siglo XVI. Su extracción de plata era tan abundante que su producción equivalía a las dos terceras partes del total que se obtenía de este metal en toda la Nueva España.
+                        </template>
+                        <template slot="footer">
+                            <img src="../imagenes/1.png" alt="">
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="MuseoI = false" v-show="MuseoI" tipo="alerta2" posicion="alerta2_1">
+                        <template slot="header">
+                            Museo de la Inquisición
+                        </template>
+                        <template>
+                            Esta hacienda fue utilizada durante el siglo XVII como calabozo y sala de tortura para la disposición de la Iglesia Católica.
+                        </template>
+                        <template slot="footer">
+                            <img src="../imagenes/2.png" alt="">
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="MuseoM = false" v-show="MuseoM" tipo="alerta3" posicion="alerta3_1" frase="Momia más sobresaliente: Remigio Leroy">
+                        <template slot="header">
+                            Museo de las momias de Guanajuato
+                        </template>
+                        <template>
+                            Son un conjunto de cuerpos momificados naturalmente, las cuales han sido descubiertas después de la exhumación en tumbas del Cementerio de Santa Paula, Guanajuato, Guanajuato Siendo actualmente una de las mayores atracciones turísticas de ese estado mexicano
+                        </template>
+                        <template slot="footer" slot-scope="mensaje">
+                            {{ mensaje.tipo }}
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="AG = false" v-show="AG" tipo="alerta4" posicion="alerta4_1" frase="Alhóndiga de Granaditas a inicios del s. XIX">
+                        <template slot="header">
+                            Alhóndiga de Granaditas 
+                        </template>
+                        <template>
+                            Edificio construido en la ciudad de Guanajuato a finales del siglo XVIII, en tiempos del virreinato, empleado en un principio como almacén y comercio de granos (es decir, una alhóndiga).​ Fue uno de los principales y primeros escenarios de la lucha de independencia de México.
+                        </template>
+                        <template slot="footer" slot-scope="mensaje">
+                            <img src="../imagenes/3.jpg" alt=""><hr>
+                            {{ mensaje.tipo }}
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="CasaR = false" v-show="CasaR" tipo="alerta5" posicion="alerta5_1">
+                        <template slot="header">
+                            Casa Diego Rivera
+                        </template>
+                        <template>
+                            La colección que se expone de este gran pintor pertenece a la colección Marte R. Gómez. El museo también cuenta con cinco salas de exposiciones temporales, en donde se exhiben distintas disciplinas de la plástica.
+                        </template>
+                        <template slot="footer">
+                           <img src="../imagenes/4.png" alt="">
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="MercadoH = false" v-show="MercadoH" tipo="alerta6" posicion="alerta6_1">
+                        <template slot="header">
+                            Mercado Hidalgo
+                        </template>
+                        <template>
+                            Originalmente pensado como estación de ferrocarril, ahora alberga al principal mercado de la ciudad. Inaugurado por el mismo Porfirio Díaz en 1910 como parte de los festejos del centenario de la Independencia.
+                        </template>
+                        <template slot="footer">
+                           <img src="../imagenes/5.png" alt="">
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="PlazaP = false" v-show="PlazaP" tipo="alerta7" posicion="alerta7_1">
+                        <template slot="header">
+                            Plaza de la paz
+                        </template>
+                        <template>
+                            Su construcción comenzó en 1865, fue en 1897 cuando se levantó el Monumento a la Paz, elaborado por el escultor mexicano Jesús Contreras con materiales como bronce y la base es de cantera y mármol.
+                        </template>
+                        <template slot="footer" >
+                            <img src="../imagenes/6.png" alt="">
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="TeatroJ = false" v-show="TeatroJ" tipo="alerta8" posicion="alerta8_1">
+                        <template slot="header">
+                            Teatro Juarez
+                        </template>
+                        <template>
+                            El recinto es uno de los teatros históricos más reconocidos. Su época de mayor auge ocurrió a finales del siglo XIX hasta el estallido de la guerra de la Revolución mexicana a principios del siglo XX.
+                        </template>
+                        <template slot="footer">
+                            <img src="../imagenes/7.png" alt="">
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="Pipila = false" v-show="Pipila" tipo="alerta9" posicion="alerta9_1">
+                        <template slot="header">
+                            Pípila
+                        </template>
+                        <template>
+                            Monumento en honor de El Pípila, está ubicado en la Ciudad de Guanajuato,​ fue creado por el escultor Juan Fernando Olaguíbel (quién también creó a La Diana Cazadora), a base de cantera rosa y fue inaugurado en septiembre de 1939. 
+                        </template>
+                        <template slot="footer">
+                            <img src="../imagenes/8.png" alt="">
+                        </template>
+                    </alerta>
+            </div>
+        </div>
+        <div id="columna" class="col-sm-3">
+            <img src="../imagenes/logo1.png" alt="">
+            <h3><strong>HISTORIA</strong></h3>
+            <p>El nombre viene de Quanaxhuato, que en purépecha significa “lugar montuoso de ranas” o “lugar de muchos cerros”.
+                Su fundación en el siglo XVI se debe a los reales de minas que con el paso del tiempo se convirtieron en el centro minero más importante de la Nueva España.
+                ¿Has notado que toda las casas se encuentran cimentadas en piedras? Bueno, pues esto no es nada fortuito. Los lugareños decidieron resguardar las construcciones en lo alto,
+                 por lo que así lograron conservar sus casas, objetos y monumentos históricos a salvo.</p>
+                 <h3><strong>LUGARES PARA VISITAR</strong></h3>
+                 <ul class="list-unstyled">
+                     <li>1.- Mina de la Valenciana</li>
+                     <li>2.- Museo de la inquisición</li>
+                     <li>3.- Museo de las momias de Guanajuato</li>
+                     <li>4.- Alhóndiga de Granaditas</li>
+                     <li>5.- Casa Diego Rivera</li>
+                     <li>6.- Mercado Hidalgo</li>
+                     <li>7.- Plaza de la paz</li>
+                     <li>8.- Teatro Juarez</li>
+                     <li>9.- Pípila</li>
+                 </ul>
+        </div>
+    </div>
+        </section>
+       
+            
+        
+
+        <footer class="container-fluid text-center">
+            <p>Created by: @alfredo_ortiz129</p>
+            <p>https://blog.vivaaerobus.com/lugares-turisticos-de-guanajuato/</p>
+        </footer>
+
+        <template id="mensajeAlerta">
+            <article class="alerta" :class="[tipo, posicion]">
+                <h3 class="alerta__header">
+                    <button class="btn btn-dark" @click="ocultarMensaje()">X</button>
+                    <slot name="header" ]>
+                       Un valor vacio para ser llenado
+                    </slot>
+                </h3>
+                <span class="alerta__contenido">
+                    <slot>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit omnis modi sequi, veritatis et
+                        ea praesentium a cupiditate, amet optio, unde sit officiis alias voluptatem sapiente error odio
+                        numquam aliquam!
+                    </slot>
+                </span>
+                <span class="alerta__footer">
+                    <slot name="footer" :tipo="alerta"></slot>
+                </span>
+            </article>
+        </template>
+        
+        <script src="../js/funciones.js"></script>
+    </body>
+</html>
